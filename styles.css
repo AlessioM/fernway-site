@@ -267,6 +267,20 @@ p { margin: 0; }
 .report-btns { display: flex; flex-wrap: wrap; gap: 10px; }
 .fine { color: var(--muted); font-size: 15px; margin-top: 26px; }
 
+/* ---------- credits ---------- */
+.credit-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.credit {
+  padding: 26px; border-radius: var(--radius);
+  background: rgba(22, 40, 26, .82); border: 1px solid var(--line);
+}
+.credit .eyebrow { margin-bottom: 10px; font-size: 12px; }
+.credit h3 a { color: var(--text); text-decoration-color: rgba(244, 240, 220, .35); text-underline-offset: 4px; }
+.credit h3 a:hover { color: var(--gold); }
+.credit .by { color: var(--muted); margin: 6px 0 12px; font-size: 15px; }
+.credit .by a, .credit .lic a { color: var(--leaf); }
+.credit p { color: var(--muted); font-size: 16px; }
+.credit .lic { margin-top: 10px; font-size: 14px; opacity: .85; }
+
 /* ---------- footer ---------- */
 .foot { width: min(var(--max), calc(100% - 32px)); margin: 0 auto; padding: 40px 0 50px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 14px 30px; align-items: center; color: var(--muted); font-size: 14px; }
 .foot-brand { display: flex; align-items: center; gap: 10px; color: var(--text); font-weight: 800; font-size: 16px; }
@@ -316,7 +330,7 @@ dialog#lightbox figcaption { text-align: center; color: var(--muted); margin-top
   .nav .btn-small { margin-left: auto; }
   .hero { align-items: flex-start; padding: 96px 0 90px; }
   .section { padding: 80px 0; }
-  .cards, .join { grid-template-columns: 1fr; }
+  .cards, .join, .credit-grid { grid-template-columns: 1fr; }
   .gallery { grid-auto-columns: 82%; }
   .logo { margin-left: 0; }
   .cta-row .btn { flex: 1 1 auto; }

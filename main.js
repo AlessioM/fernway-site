@@ -197,7 +197,7 @@ const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").match
  * ------------------------------------------------------------------ */
 const SHOTS = [
   ["02_forest", "Forest road", "Rivers and bridges, chests, orcs with clubs and butterflies on three lanes."],
-  ["01_title", "Title screen", "The forest keeps running behind the menu."],
+  ["01_title", "Title screen", "Play, How to play, Credits and Settings over a demo run that keeps going."],
   ["03_frenzy", "Frenzy", "Fill the meter and the whole road pays out in gold."],
   ["04_net", "The net", "Hold to sweep butterflies into the bag — the multiplier climbs while you hold."],
   ["05_snow", "Snowfields", "Every so often the forest freezes: pines, crystals and falling snow."],
