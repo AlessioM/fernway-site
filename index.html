@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fernway — an idle forest run</title>
+<meta name="description" content="A pixel-art idle runner for Android: three lanes, three heroes, butterflies, orcs and coins. Swipe, jump and net your way down the forest road, or let your hero run on their own. Free, no account, works offline.">
+<meta name="theme-color" content="#0f1f12">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Fernway — an idle forest run">
+<meta property="og:description" content="Swipe between three lanes, catch butterflies, fight orcs, ascend. Or just watch your hero run.">
+<meta property="og:image" content="https://alessiom.github.io/fernway-site/img/og.png">
+<meta property="og:url" content="https://alessiom.github.io/fernway-site/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preload" href="fonts/Nunito.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<canvas id="forest" aria-hidden="true"></canvas>
+
+<header class="nav">
+  <a class="brand" href="#top" aria-label="Fernway, back to top">
+    <img src="img/icon-192.png" alt="" width="36" height="36">
+    <span>Fernway</span>
+  </a>
+  <nav aria-label="Sections">
+    <a href="#how">How it plays</a>
+    <a href="#screens">Screens</a>
+    <a href="#features">Features</a>
+  </nav>
+  <a class="btn btn-small" href="#beta">Join the beta</a>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-copy">
+      <img class="logo" src="img/logo.png" width="344" height="152" alt="Fernway">
+      <p class="eyebrow">An idle forest run · Android beta</p>
+      <h1>Run the forest.<br><span class="grad">Even when you don't.</span></h1>
+      <p class="lede">Swipe between three lanes, leap rivers and pits, net butterflies by the dozen and knock
+        orcs off the road. Spend your coins, ascend, and come back stronger — or put the phone down and
+        let your hero keep running.</p>
+      <div class="cta-row">
+        <a class="btn" href="#beta">Join the Android beta</a>
+        <a class="btn btn-ghost" href="#how">See how it plays</a>
+      </div>
+      <ul class="badges" aria-label="Highlights">
+        <li>Free</li><li>No account</li><li>Works offline</li>
+      </ul>
+    </div>
+    <a class="scroll-hint" href="#how" aria-label="Scroll to how it plays"><span></span></a>
+  </section>
+
+  <section id="how" class="section how">
+    <div class="how-grid">
+      <div class="phone reveal" aria-label="Fernway in portrait on a phone">
+        <img src="img/screens/p_run-540.webp" width="540" height="858" alt="Portrait run: the wizard on the forest road with a stage banner, coins and butterflies ahead.">
+        <div class="gestures" aria-hidden="true">
+          <span class="g g-up">swipe ↑↓ · lane</span>
+          <span class="g g-tap">tap · jump</span>
+          <span class="g g-hold">hold · net</span>
+        </div>
+      </div>
+      <div class="how-copy">
+        <h2 class="reveal">From footpath to legend</h2>
+        <ol class="steps">
+          <li class="reveal"><span class="num">1</span><div><h3>Run</h3><p>Swipe up or down to change lane, tap to jump, swipe back to roll under bats, forward to dash. Hold to sweep butterflies into your net — the longer you hold, the bigger the multiplier.</p></div></li>
+          <li class="reveal"><span class="num">2</span><div><h3>Upgrade</h3><p>Coins buy sharper blades, faster boots and a fatter purse. Every class has its own tree, and Instinct teaches your hero to dodge on their own.</p></div></li>
+          <li class="reveal"><span class="num">3</span><div><h3>Ascend</h3><p>When the road gets long, ascend: trade your coins for Seeds, keep your class skills and plant permanent bonuses for every run that follows.</p></div></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section id="screens" class="section screens">
+    <h2 class="reveal center">See it in action</h2>
+    <p class="sub center reveal">Real captures from the game. Tap any screenshot to enlarge.</p>
+    <figure class="hero-shot reveal">
+      <button class="shot" data-i="0" aria-label="Enlarge: forest road with river, bridge and enemies">
+        <img src="img/screens/02_forest.webp" width="1920" height="1080" alt="The rogue runs down a three-lane forest road past a river, a wooden bridge, a treasure chest and a line of orcs.">
+      </button>
+    </figure>
+    <div class="gallery" id="gallery">
+      <!-- filled by main.js from SHOTS so captions and the lightbox stay in sync -->
+    </div>
+  </section>
+
+  <section class="chapters" aria-label="Things you meet on the road">
+    <div class="marquee"><div class="track" id="track"></div></div>
+  </section>
+
+  <section id="features" class="section features">
+    <h2 class="reveal center">Everything on the road</h2>
+    <div class="cards">
+      <article class="card reveal">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2 5h5l-4 3.5 1.5 5.5L12 13l-4.5 3 1.5-5.5L5 7h5z"/><rect x="11" y="15" width="2" height="7" rx="1"/></svg>
+        <h3>Three heroes</h3>
+        <p>The Knight hits hardest, the Rogue double-jumps and keeps the net bonus longest, the Wizard fires from afar. Run through a portal to switch mid-run.</p>
+      </article>
+      <article class="card reveal">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke-width="2"/><path d="M12 6v6l4 3" fill="none" stroke-width="2" stroke-linecap="round"/></svg>
+        <h3>Idle when you are</h3>
+        <p>Upgrade Instinct and Wayfinder and your hero jumps, rolls and picks lanes alone. Back after a break? The forest kept a gift for you.</p>
+      </article>
+      <article class="card reveal">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4c5 0 9 3 9 9v7H11v-7c0-4-3-7-7-7z"/><path d="M20 4c-4 0-6 2-6.6 4.6"/><circle cx="17" cy="15" r="3"/></svg>
+        <h3>Net, combo, frenzy</h3>
+        <p>Hold the net for up to ×2 coins, chain pickups into a combo, fill the meter and the whole road turns to gold in a frenzy.</p>
+      </article>
+      <article class="card reveal">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22V11"/><path d="M12 11C12 6 8 3 4 3c0 5 3 8 8 8zM12 13c0-4 3-7 8-7 0 4-3 7-8 7z"/></svg>
+        <h3>Seeds &amp; ascension</h3>
+        <p>Start over richer: Seeds from all the coins you ever earned buy Golden Roots, Headstart, Sprouting and more — kept forever.</p>
+      </article>
+      <article class="card reveal">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v20M3.3 7l17.4 10M20.7 7L3.3 17" fill="none" stroke-width="2" stroke-linecap="round"/></svg>
+        <h3>A forest that changes</h3>
+        <p>Autumn groves, farms, rivers and cabins, then a stretch of snow with frosted pines, crystals and falling flakes. Stages get tougher — and pay better.</p>
+      </article>
+      <article class="card reveal">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l8 3v6c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V5z"/></svg>
+        <h3>No account, plays offline</h3>
+        <p>Just install and run — no sign-up, no login, no connection needed. Your progress is saved on your phone. Portrait or landscape, your choice.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="beta" class="section beta">
+    <div class="beta-card reveal">
+      <p class="eyebrow">Closed testing on Google Play</p>
+      <h2>Join the beta in two steps</h2>
+      <p>Fernway is in closed testing before its Play Store launch. Use the same Google account for both steps and on your Android phone.</p>
+      <ol class="join">
+        <li><span class="num">1</span><div><h3>Join the tester group</h3><p>Google uses this group to let you in.</p>
+          <a class="btn" href="https://groups.google.com/g/fernway-testers" rel="noopener">Join the group</a></div></li>
+        <li><span class="num">2</span><div><h3>Opt in &amp; install</h3><p>Accept the invite, then install from Google Play.</p>
+          <a class="btn" href="https://play.google.com/apps/testing/com.classicforestgames.fernway" rel="noopener">Become a tester</a></div></li>
+      </ol>
+      <div class="report">
+        <div><h3>Found a bug? Too slow, too fast?</h3>
+          <p>Report it on GitHub — or browse what others have already found.</p></div>
+        <div class="report-btns">
+          <a class="btn btn-small" href="https://github.com/AlessioM/fernway-site/issues/new?template=bug.yml" rel="noopener">Report a bug</a>
+          <a class="btn btn-small btn-ghost" href="https://github.com/AlessioM/fernway-site/issues/new?template=feedback.yml" rel="noopener">Share feedback</a>
+          <a class="btn btn-small btn-ghost" href="https://github.com/AlessioM/fernway-site/issues" rel="noopener">All issues</a>
+        </div>
+      </div>
+      <p class="fine">Please stay opted in for at least 14 days — it's how a new game earns its place on Google Play.
+        No GitHub account? Feedback is just as welcome at
+        <a href="mailto:classic.forest.games@gmail.com">classic.forest.games@gmail.com</a>.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot-brand"><img src="img/icon-192.png" alt="" width="28" height="28"> Fernway</div>
+  <nav aria-label="Footer">
+    <a href="privacy/">Privacy policy</a>
+    <a href="https://github.com/AlessioM/fernway-site/issues" rel="noopener">Report an issue</a>
+    <a href="mailto:classic.forest.games@gmail.com">Contact</a>
+  </nav>
+  <p>© 2026 Classic Forest Games · Pixel art in the game by <a href="https://anokolisa.itch.io/" rel="noopener">Anokolisa</a>
+    and <a href="https://pixel-boy.itch.io/ninja-adventure-asset-pack" rel="noopener">pixel-boy &amp; AAA</a> ·
+    Nunito font under the <a href="fonts/OFL.txt">SIL Open Font License</a></p>
+</footer>
+
+<dialog id="lightbox" aria-label="Screenshot viewer">
+  <button class="lb-close" aria-label="Close">×</button>
+  <button class="lb-nav lb-prev" aria-label="Previous screenshot">‹</button>
+  <figure><img id="lb-img" alt=""><figcaption id="lb-cap"></figcaption></figure>
+  <button class="lb-nav lb-next" aria-label="Next screenshot">›</button>
+</dialog>
+
+<script src="main.js"></script>
+</body>
+</html>

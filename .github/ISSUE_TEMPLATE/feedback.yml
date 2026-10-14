@@ -1,0 +1,30 @@
+name: Feedback
+description: Pacing, balance, controls, ideas, things you loved or hated
+title: "[Feedback] "
+labels: [feedback]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of feedback?
+      options:
+        - Progress feels too slow
+        - Progress feels too fast
+        - Something was confusing
+        - Controls / gestures
+        - A class feels too strong or too weak
+        - Idea or feature request
+        - General impressions
+    validations:
+      required: true
+  - type: input
+    id: where
+    attributes:
+      label: Class, stage or upgrade (if any)
+      placeholder: e.g. Wizard, stage 6, Golden Roots
+  - type: textarea
+    id: details
+    attributes:
+      label: Tell us more
+    validations:
+      required: true
