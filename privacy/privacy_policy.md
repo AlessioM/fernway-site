@@ -1,6 +1,6 @@
 # Fernway — Privacy Policy
 
-Last updated: 2026-10-14
+Last updated: 2026-10-15
 
 Fernway ("the game") is developed by Classic Forest Games.
 
@@ -13,10 +13,20 @@ service, and it does not request network access.
 Your progress (coins, upgrades, Seeds, class experience) and settings are stored only on your
 device. The game does not send them to the developer or to a third party.
 
+## Browser version
+
+The game can also be played in a web browser from the Fernway website. There, your progress and
+settings are kept in your browser's local storage on your device and are not sent to the developer.
+The website and game files are hosted by GitHub Pages; when your browser downloads them, GitHub may
+process technical data such as your IP address as described in the
+[GitHub General Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
+The developer does not receive these logs and the website uses no cookies, analytics or advertising.
+
 ## Retention and deletion
 
 Local game data remains on your device until you reset progress in the game (Settings → Reset
-progress), clear the app's data, or uninstall the game. Because the developer never receives this
+progress), clear the app's data, or uninstall the game. In the browser version, it remains until you reset
+progress or clear this site's data in your browser. Because the developer never receives this
 data, there is no server-side copy to retrieve or delete.
 
 ## Security
